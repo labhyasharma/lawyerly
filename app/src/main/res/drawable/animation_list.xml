@@ -2,13 +2,13 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:drawable="@drawable/pacific_dream"
-        android:duration="2000" />
+        android:duration="1000" />
     <item
         android:drawable="@drawable/gradient_anim2"
-        android:duration="2000" />
+        android:duration="1000" />
 
     <item
         android:drawable="@drawable/reverse_pacific_dream"
-        android:duration="2000" />
+        android:duration="1000" />
 
 </animation-list>

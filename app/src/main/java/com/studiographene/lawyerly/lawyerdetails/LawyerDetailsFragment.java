@@ -66,8 +66,8 @@ public class LawyerDetailsFragment extends BaseFragment implements LawyerDetails
 
 
         anim = (AnimationDrawable) binding.buttonImage.getBackground();
-        anim.setEnterFadeDuration(2000);
-        anim.setExitFadeDuration(2000);
+        anim.setEnterFadeDuration(1000);
+        anim.setExitFadeDuration(1000);
 
 
         return binding.getRoot();

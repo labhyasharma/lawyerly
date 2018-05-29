@@ -478,6 +478,15 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/animation_list"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="SCHEDULE LAWYER"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp"
+                android:fontFamily="@font/sans_bold"/>
+
         </FrameLayout>
 
 
