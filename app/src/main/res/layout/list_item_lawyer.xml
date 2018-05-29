@@ -121,6 +121,16 @@
                 </LinearLayout>
 
 
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:src="@drawable/small_arrow"/>
+
+
             </RelativeLayout>
 
 
