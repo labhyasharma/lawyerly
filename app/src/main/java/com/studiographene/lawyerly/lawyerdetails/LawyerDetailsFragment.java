@@ -2,6 +2,7 @@ package com.studiographene.lawyerly.lawyerdetails;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,6 +38,8 @@ public class LawyerDetailsFragment extends BaseFragment implements LawyerDetails
     FragmentLawyerDetailsBinding binding;
 
 
+    AnimationDrawable anim;
+
     @Inject
     LawyerDetailsPresenter presenter;
 
@@ -62,9 +65,28 @@ public class LawyerDetailsFragment extends BaseFragment implements LawyerDetails
         makeUIChanges();
 
 
+        anim = (AnimationDrawable) binding.buttonImage.getBackground();
+        anim.setEnterFadeDuration(2000);
+        anim.setExitFadeDuration(2000);
+
+
         return binding.getRoot();
     }
 
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (anim != null && !anim.isRunning())
+            anim.start();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (anim != null && anim.isRunning())
+            anim.stop();
+    }
 
     void makeUIChanges(){
         if (getActivity().getIntent() != null)

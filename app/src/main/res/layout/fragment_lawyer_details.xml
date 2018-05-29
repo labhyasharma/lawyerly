@@ -458,5 +458,28 @@
         </android.support.v7.widget.CardView>
 
 
+
+        <FrameLayout
+            android:id="@+id/buttonBottom"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_32sdp"
+            android:layout_marginEnd="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:elevation="@dimen/_8sdp"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="@drawable/rect_gradient">
+
+            <ImageView
+                android:id="@+id/buttonImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/animation_list"/>
+
+        </FrameLayout>
+
+
     </RelativeLayout>
 </layout>
