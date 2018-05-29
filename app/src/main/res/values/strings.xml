@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lawyerly</string>
+    <string name="text_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </string>
+    <string name="text_info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley </string>
 </resources>

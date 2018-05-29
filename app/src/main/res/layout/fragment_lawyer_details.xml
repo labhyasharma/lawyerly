@@ -383,6 +383,72 @@
 
 
 
+                <LinearLayout
+                    android:id="@+id/containerDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seperator3"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:fontFamily="@font/sans_bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sans_light"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="@string/text_description"/>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/seperator4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@+id/containerDesc"
+                    android:src="@drawable/thin_line_hori"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_32sdp"/>
+
+
+                <LinearLayout
+                    android:id="@+id/containerAnotherInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_below="@+id/seperator4"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Another Info"
+                        android:fontFamily="@font/sans_bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sans_light"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="@string/text_info"/>
+
+
+                </LinearLayout>
+
 
 
 
