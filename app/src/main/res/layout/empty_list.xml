@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:id="@+id/emptyView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:visibility="invisible"
+    >
+    <ImageView
+
+        android:id="@+id/placeHolder"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/blankTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/placeHolder"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="No Data Found"
+
+
+        />
+
+
+
+
+</RelativeLayout>
+</layout>

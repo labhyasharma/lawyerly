@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard.DashboardActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Lawyerly"
+            android:fontFamily="@font/sans_bold"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp" />
+
+
+        <ImageView
+            android:id="@+id/filter"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/filters"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_toLeftOf="@+id/filter"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sort_by"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"/>
+
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_below="@+id/header"
+        app:tabMode="fixed" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sliding_tabs"
+        android:background="@android:color/white" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:src="@drawable/top_bottom_gradient"
+        android:layout_below="@+id/sliding_tabs"/>
+
+
+</RelativeLayout>

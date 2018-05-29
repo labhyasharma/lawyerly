@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="mode"
+            type="Integer" />
+
+        <variable
+            name="model"
+            type="com.studiographene.lawyerly.lawyerslist.Lawyer" />
+
+        <variable
+            name="listener"
+            type="com.studiographene.lawyerly.basecode.common.BaseBindingAdapter.Listener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_64sdp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_54sdp"
+            android:layout_centerVertical="true"
+            android:onClick="@{view -> listener.onItemClick(view,model,0)}"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/profilePic"
+                    android:layout_width="@dimen/_54sdp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:imageUrl="@{model.profilePic}"/>
+
+                <TextView
+                    android:id="@+id/lawyerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:text="@{model.name}"
+                    android:fontFamily="@font/sans_bold"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_toEndOf="@+id/profilePic"/>
+
+                <TextView
+                    android:id="@+id/specialityTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/profilePic"
+                    android:layout_below="@+id/lawyerName"
+                    android:fontFamily="@font/sans"
+                    android:text="@{model.speciality}"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_alignStart="@+id/lawyerName"/>
+
+
+                <LinearLayout
+                    android:id="@+id/containerRatings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_54sdp">
+
+                    <TextView
+                        android:id="@+id/ratingsTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@{model.ratings}"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/sans_bold"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:src="@drawable/rating_icon"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/containerRatings"
+                    android:layout_below="@+id/containerRatings"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{`£`+ model.rate}"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sans"
+                        android:textSize="@dimen/_18sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/h"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/verified_icon"
+            android:visibility="@{model.verified ? View.VISIBLE : View.GONE}"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:elevation="@dimen/_8sdp"/>
+
+
+    </RelativeLayout>
+
+
+</layout>
