@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:foreground="?android:attr/selectableItemBackground"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/light_grey">
 
 
         <RelativeLayout
@@ -134,7 +135,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="@dimen/_108sdp"
+            android:layout_width="@dimen/_128sdp"
             android:layout_height="wrap_content"
             android:elevation="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_6sdp"
@@ -142,14 +143,253 @@
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/containerLawyerInfo">
 
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 android:src="@drawable/trial_session_banner"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1st FREE CONSULTATION Available"
+                android:textSize="@dimen/_7sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"/>
+
         </RelativeLayout>
 
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/containerLawyerInfo"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_24sdp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/containerData"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_64sdp"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/containerRatingColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.8"
+                                android:fontFamily="@font/sans"
+                                android:textSize="@dimen/_18sdp"/>
+
+                            <ImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/rating_colour"
+                                android:layout_marginStart="@dimen/_4sdp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Rating"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/sans"
+                            android:textColor="@color/black"
+                            android:layout_below="@+id/containerRatingColor"/>
+                        
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/thin_line_h"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/containerReviews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12"
+                                android:fontFamily="@font/sans"
+                                android:textSize="@dimen/_18sdp"/>
+
+                            <ImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/reviews_colour"
+                                android:layout_marginStart="@dimen/_4sdp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Reviews"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/sans"
+                            android:textColor="@color/black"
+                            android:layout_below="@+id/containerReviews"/>
+
+
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/thin_line_h"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+
+                        <LinearLayout
+                            android:id="@+id/containerRanking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1/18"
+                                android:fontFamily="@font/sans"
+                                android:textSize="@dimen/_18sdp"/>
+
+                            <ImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ranking_colour"
+                                android:layout_marginStart="@dimen/_4sdp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Ranking"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/sans"
+                            android:textColor="@color/black"
+                            android:layout_below="@+id/containerRanking"/>
+
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/seperator1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@+id/containerData"
+                    android:src="@drawable/thin_line_hori"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_32sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/containerResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_below="@+id/seperator1"
+                    android:orientation="horizontal"
+                    android:background="@color/light_grey">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sans"
+                        android:gravity="center"
+                        android:text="Member Since: Oct 2015"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/sans"
+                        android:text="Avg. Response Time: 1 day"/>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/seperator2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@+id/containerResponse"
+                    android:src="@drawable/thin_line_hori"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_32sdp"/>
+
+
+                <ImageView
+                    android:id="@+id/seperator3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_below="@+id/seperator2"
+                    android:src="@drawable/thin_line_hori"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_32sdp"/>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
 
 
     </RelativeLayout>
