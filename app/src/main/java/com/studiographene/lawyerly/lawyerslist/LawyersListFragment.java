@@ -17,6 +17,7 @@ import com.studiographene.lawyerly.basecode.Application;
 import com.studiographene.lawyerly.basecode.common.BaseBindingAdapter;
 import com.studiographene.lawyerly.basecode.common.BaseFragment;
 import com.studiographene.lawyerly.databinding.SingleRecyclerViewLayoutBinding;
+import com.studiographene.lawyerly.lawyerdetails.LawyerDetailsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -132,6 +133,10 @@ public class LawyersListFragment extends BaseFragment implements LawyersListCont
     @Override
     public void onItemClick(View view, Lawyer item, int clickType) {
 
+
+        Intent intent = new Intent(getActivity(), LawyerDetailsActivity.class);
+
+        startActivity(intent);
 
     }
 
