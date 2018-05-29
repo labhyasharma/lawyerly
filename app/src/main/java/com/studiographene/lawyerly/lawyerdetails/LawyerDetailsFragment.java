@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
 import com.studiographene.lawyerly.basecode.Application;
 import com.studiographene.lawyerly.basecode.common.BaseFragment;
 import com.studiographene.lawyerly.databinding.FragmentLawyerDetailsBinding;
@@ -20,6 +21,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+
+import static com.studiographene.lawyerly.lawyerslist.LawyersListFragment.NAME;
+import static com.studiographene.lawyerly.lawyerslist.LawyersListFragment.PIC_URL;
+import static com.studiographene.lawyerly.lawyerslist.LawyersListFragment.RATE;
+import static com.studiographene.lawyerly.lawyerslist.LawyersListFragment.RATINGS;
+import static com.studiographene.lawyerly.lawyerslist.LawyersListFragment.SPECIALITY;
+import static com.studiographene.lawyerly.lawyerslist.LawyersListFragment.VERIFIED;
 
 
 public class LawyerDetailsFragment extends BaseFragment implements LawyerDetailsContract.View {
@@ -50,8 +58,48 @@ public class LawyerDetailsFragment extends BaseFragment implements LawyerDetails
 
         presenter.attachView(this);
 
+
+        makeUIChanges();
+
+
         return binding.getRoot();
     }
+
+
+    void makeUIChanges(){
+        if (getActivity().getIntent() != null)
+        {
+            Intent intent = getActivity().getIntent();
+
+            String name = intent.getStringExtra(NAME);
+            String speciality = intent.getStringExtra(SPECIALITY);
+            String rate = intent.getStringExtra(RATE);
+            String ratings = intent.getStringExtra(RATINGS);
+            String profilePic = intent.getStringExtra(PIC_URL);
+            boolean verfied = intent.getBooleanExtra(VERIFIED,false);
+
+
+            if (verfied)
+            {
+                binding.vefiedImage.setVisibility(View.VISIBLE);
+                binding.verifiedText.setVisibility(View.VISIBLE);
+            }
+
+            binding.lawyerName.setText(name);
+            binding.specialityTxt.setText(speciality);
+            binding.rateTxt.setText("£"+rate);
+
+//            binding.ra
+
+
+            Glide.with(binding.profilePic.getContext())
+                    .load(profilePic)
+                    .into(binding.profilePic);
+
+
+        }
+    }
+
 
     public void refresh() {
 

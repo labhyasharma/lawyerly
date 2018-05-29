@@ -10,21 +10,146 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_16sdp"
-        android:layout_marginRight="@dimen/_8sdp"
-        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_height="match_parent"
         android:foreground="?android:attr/selectableItemBackground"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+
+        <RelativeLayout
+            android:id="@+id/containerLawyerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_98sdp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_88sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?android:attr/selectableItemBackground"
+
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/profilePic"
+                        android:layout_width="@dimen/_88sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/lawyerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_28sdp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sans_bold"
+                        android:layout_alignStart="@+id/specialityTxt"
+                        android:textSize="@dimen/_18sdp"
+                        android:layout_toEndOf="@+id/profilePic"/>
+
+
+
+                    <TextView
+                        android:id="@+id/specialityTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_24sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@+id/profilePic"
+                        android:layout_alignParentBottom="true"
+                        android:fontFamily="@font/sans" />
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_24sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="bottom"
+                        android:layout_marginEnd="@dimen/_16sdp">
+
+
+
+                        <TextView
+                            android:id="@+id/rateTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_toLeftOf="@+id/perUnit"
+                            android:fontFamily="@font/sans"
+                            android:text="234"
+                            android:textSize="@dimen/_20sdp"/>
+
+                        <TextView
+                            android:id="@+id/perUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="/h"/>
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/verifiedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/vefiedImage"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:visibility="gone"
+                android:textSize="@dimen/_9sdp"
+                android:elevation="@dimen/_8sdp"
+                android:text="Verified Background"/>
+
+
+            <ImageView
+                android:id="@+id/vefiedImage"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/verified_icon"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:elevation="@dimen/_8sdp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/_108sdp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="@dimen/_4sdp"
-            android:text="model"
-            android:textSize="@dimen/_14sdp" />
+            android:elevation="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_minus16sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/containerLawyerInfo">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/trial_session_banner"/>
+
+        </RelativeLayout>
+
 
 
     </RelativeLayout>

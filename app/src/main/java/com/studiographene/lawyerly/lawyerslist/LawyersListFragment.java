@@ -33,6 +33,12 @@ public class LawyersListFragment extends BaseFragment implements LawyersListCont
     LawyersListAdapter adapter;
     List<Lawyer> list;
 
+    public static final String NAME = "NAME";
+    public static final String RATE = "RATE";
+    public static final String RATINGS = "RATINGS";
+    public static final String VERIFIED = "VERIFIED";
+    public static final String PIC_URL = "PICURL";
+    public static final String SPECIALITY = "SPECIALITY";
 
     @Inject
     DashboardActivity dashboardActivity;
@@ -135,7 +141,12 @@ public class LawyersListFragment extends BaseFragment implements LawyersListCont
 
 
         Intent intent = new Intent(getActivity(), LawyerDetailsActivity.class);
-
+        intent.putExtra(NAME,item.getName());
+        intent.putExtra(RATE,item.getRate());
+        intent.putExtra(RATINGS,item.getRatings());
+        intent.putExtra(PIC_URL,item.getProfilePic());
+        intent.putExtra(SPECIALITY,item.getSpeciality());
+        intent.putExtra(VERIFIED,item.isVerified());
         startActivity(intent);
 
     }

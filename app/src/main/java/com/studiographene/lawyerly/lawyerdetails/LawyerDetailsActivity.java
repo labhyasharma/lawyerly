@@ -7,6 +7,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.view.View;
 
 import com.studiographene.lawyerly.R;
 
@@ -36,6 +37,14 @@ public class LawyerDetailsActivity extends AppCompatActivity {
 
 
         addFragment(fragment, R.id.containerDetails, false);
+
+
+        findViewById(R.id.backButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
     }
