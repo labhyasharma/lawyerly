@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.studiographene.lawyerly.R;
 import com.studiographene.lawyerly.basecode.Application;
 import com.studiographene.lawyerly.basecode.common.BaseFragment;
 import com.studiographene.lawyerly.databinding.FragmentLawyerDetailsBinding;
@@ -114,7 +116,13 @@ public class LawyerDetailsFragment extends BaseFragment implements LawyerDetails
 //            binding.ra
 
 
+
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.placeholder(R.drawable.businessman);
+            requestOptions.error(R.drawable.businessman);
+
             Glide.with(binding.profilePic.getContext())
+                    .setDefaultRequestOptions(requestOptions)
                     .load(profilePic)
                     .into(binding.profilePic);
 

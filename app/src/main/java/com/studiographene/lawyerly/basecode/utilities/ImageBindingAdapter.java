@@ -5,6 +5,8 @@ import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.studiographene.lawyerly.R;
 
 /**
  * Created by ashu on 24/02/17.
@@ -15,7 +17,13 @@ public class ImageBindingAdapter {
     @BindingAdapter({"bind:imageUrl"})
     public static void loadImage(ImageView imageView, String url) {
 
+
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions.placeholder(R.drawable.businessman);
+        requestOptions.error(R.drawable.businessman);
+
         Glide.with(imageView.getContext())
+                .setDefaultRequestOptions(requestOptions)
                 .load(url)
                 .into(imageView);
 
