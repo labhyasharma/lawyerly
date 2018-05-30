@@ -56,7 +56,7 @@
                     android:text="@{model.name}"
                     android:fontFamily="@font/sans_bold"
                     android:layout_marginStart="@dimen/_8sdp"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_16sdp"
                     android:layout_toEndOf="@+id/profilePic"/>
 
                 <TextView
@@ -66,6 +66,7 @@
                     android:layout_toEndOf="@+id/profilePic"
                     android:layout_below="@+id/lawyerName"
                     android:fontFamily="@font/sans"
+                    android:textSize="@dimen/_12sdp"
                     android:text="@{model.speciality}"
                     android:layout_marginStart="@dimen/_4sdp"
                     android:layout_alignStart="@+id/lawyerName"/>
@@ -78,7 +79,7 @@
                     android:layout_alignParentEnd="true"
                     android:orientation="horizontal"
                     android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_marginEnd="@dimen/_54sdp">
+                    android:layout_marginEnd="@dimen/_43sdp">
 
                     <TextView
                         android:id="@+id/ratingsTxt"
@@ -111,7 +112,7 @@
                         android:text="@{`£`+ model.rate}"
                         android:textColor="@color/black"
                         android:fontFamily="@font/sans"
-                        android:textSize="@dimen/_18sdp"/>
+                        android:textSize="@dimen/_20sdp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
