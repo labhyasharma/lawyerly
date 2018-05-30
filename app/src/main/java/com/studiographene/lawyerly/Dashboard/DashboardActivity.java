@@ -4,6 +4,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import com.studiographene.lawyerly.R;
+import com.studiographene.lawyerly.lawyerdetails.LawyerDetailsFragment;
 import com.studiographene.lawyerly.lawyerslist.LawyersListFragment;
 
 import java.util.ArrayList;
@@ -22,10 +24,16 @@ public class DashboardActivity extends AppCompatActivity {
     LawyersListFragment lawyersListFragment1 = new LawyersListFragment();
     LawyersListFragment lawyersListFragment2 = new LawyersListFragment();
 
+
+    BottomBarFragment bottomBarFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+
+        bottomBarFragment = BottomBarFragment.getInstance(getIntent().getExtras());
 
 
 
@@ -44,8 +52,20 @@ public class DashboardActivity extends AppCompatActivity {
 
         }
 
+
+        addFragment(bottomBarFragment,R.id.containerBottomBar,false);
     }
 
+
+    public final void addFragment(BottomBarFragment fragment, int containerId,
+                                  boolean addToBackStack) {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(containerId, fragment, fragment.getClass().getSimpleName());
+        if (addToBackStack) {
+            ft.addToBackStack(null);
+        }
+        ft.commit();
+    }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());

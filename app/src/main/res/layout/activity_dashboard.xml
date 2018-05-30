@@ -63,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/sliding_tabs"
+        android:layout_above="@+id/containerBottomBar"
         android:background="@android:color/white" />
     <ImageView
         android:layout_width="match_parent"
@@ -70,5 +71,17 @@
         android:src="@drawable/top_bottom_gradient"
         android:layout_below="@+id/sliding_tabs"/>
 
+
+    <FrameLayout
+        android:id="@+id/containerBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_alignParentBottom="true"></FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_6sdp"
+        android:src="@drawable/bottom_top_gradient"
+        android:layout_above="@+id/containerBottomBar"/>
 
 </RelativeLayout>
