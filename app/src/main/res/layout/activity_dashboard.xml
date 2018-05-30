@@ -58,13 +58,72 @@
         app:tabMode="fixed" />
 
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/sliding_tabs"
         android:layout_above="@+id/containerBottomBar"
-        android:background="@android:color/white" />
+        tools:context="com.journaldev.collapsingtoolbarlayout.ScrollingActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_72sdp"
+            android:background="@color/light_grey"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <ImageView
+                    android:id="@+id/expandedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_72sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/illustration"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7" />
+
+                <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="?attr/actionBarSize"-->
+                    <!--app:layout_collapseMode="pin" />-->
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:fillViewport="true">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sliding_tabs"
+                android:layout_above="@+id/containerBottomBar"
+                android:background="@android:color/white" />
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_2sdp"
